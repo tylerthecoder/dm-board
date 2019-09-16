@@ -1,0 +1,17 @@
+#player-list .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  padding: 5px;
+  margin-right: -10px;
+  margin-left: -10px;
+  width: 100%;
+}
+
+#player-list .row:hover {
+  background-color: #eee;
+}
+
+.row div {
+  display: flex;
+}

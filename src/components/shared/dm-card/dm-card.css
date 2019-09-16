@@ -1,0 +1,13 @@
+.dm-card {
+  background-color: white;
+  border: solid black 2px;
+  border-radius: 10px;
+  padding: 10px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.dm-card .header {
+  display: flex;
+  justify-content: space-between;
+}

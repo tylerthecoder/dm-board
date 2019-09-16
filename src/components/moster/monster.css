@@ -1,0 +1,10 @@
+.monsterCard .monster-name-input {
+  font-size: 2em;
+}
+
+.monsterCard .row {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
