@@ -15,3 +15,19 @@
 .row div {
   display: flex;
 }
+
+#player-list .player-row .MuiButton-root {
+  min-width: 0px;
+}
+
+#player-list .player-row .MuiInput-input {
+  width: 60px;
+}
+
+#player-list .end-row .MuiInput-input {
+  width: 150px;
+}
+
+#player-list .player-row .MuiButton-root:hover {
+  background: none;
+}

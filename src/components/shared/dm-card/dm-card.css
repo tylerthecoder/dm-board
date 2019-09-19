@@ -11,3 +11,18 @@
   display: flex;
   justify-content: space-between;
 }
+
+.dm-card .header h1 {
+  margin: 0px;
+}
+
+.dm-card .x {
+  background: none;
+  border: none;
+  align-self: flex-start;
+  font-size: 1.5em;
+}
+
+.dm-card .x:hover {
+  color: red;
+}

@@ -2,22 +2,50 @@ import React from "react";
 import AddIcon from "@material-ui/icons/Add";
 import Fab from "@material-ui/core/Fab";
 import "./sidebar.css";
+import Monsters from "../../data/monster.json";
+import PlayerListCard from "../player-list/player-list";
+
+console.log(Monsters);
+
+const cards = [
+  {
+    name: "Battle Order",
+    html: <PlayerListCard />
+  },
+  {
+    name: "Monster",
+    types: [
+      {
+        name: "Goblin",
+        html: Monsters.goblin
+      }
+    ]
+  }
+];
+
+function addRow(props) {
+  const card = props.card;
+  return (
+    <div className="flex-row" key={card}>
+      <h3>{card.name}</h3>
+      <Fab size="small" color="primary" onClick={() => card.onClick(card.html)}>
+        <AddIcon />
+      </Fab>
+    </div>
+  );
+}
 
 export function Sidebar(props) {
-  const things = ["Battle Order", "Monster"];
-
   function handleClick(item) {
     props.onAddItem(item);
   }
 
   return (
     <div id="sidebar">
-      {things.map(thing => (
-        <div className="flex-row" key={thing}>
-          <h3>{thing}</h3>
-          <Fab size="small" color="primary" onClick={() => handleClick(thing)}>
-            <AddIcon />
-          </Fab>
+      {cards.map(thing => (
+        <div>
+          <addRow card={thing} />
+          {thing.types && thing.types.map(card => <addRow card={card} />)}
         </div>
       ))}
     </div>
